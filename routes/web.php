@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\Admin\aboutUsController;
 use App\Http\Controllers\Admin\aboutUsSettingController;
+use App\Http\Controllers\Admin\offerController;
+use App\Http\Controllers\Admin\offerSettingController;
+use App\Http\Controllers\Admin\productSettingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Auth\Events\Verified;
@@ -30,6 +33,9 @@ Route::group(['prifex' => 'admin', 'as' => 'admin.', 'auth'=>'Verified' ], funct
     // About-us section routes.
     Route::resource('/aboutUs', aboutUsController::class);
     Route::resource('/aboutUs-settings', aboutUsSettingController::class);
+    Route::resource('/offers-settings', offerSettingController::class);
+    Route::resource('/offers',offerController::class);
+    Route::resource('/products-settings', productSettingController::class);
     Route::get('/admine', function () {
         return view('admin.index');
     })->name('panel');

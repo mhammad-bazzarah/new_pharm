@@ -1,10 +1,9 @@
 <section id="pricing" class="section-bg">
     <div class="container">
         <div class="section-header">
-            <h3 class="section-title">Products</h3>
+            <h3 class="section-title">{{ $productSettings->title }}</h3>
             <span class="section-divider"></span>
-            <p class="section-description">we have three categories of products ,To know the details click
-                getstarted!!!</p>
+            <p class="section-description">{!! $productSettings->sub_title !!}</p>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6">

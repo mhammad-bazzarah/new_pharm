@@ -48,15 +48,29 @@
                     <li><a href="{{ route('admin.aboutUs-settings.index') }}">settings</span></a></li>
                 </ul>
             </li>
-            <li><a class="nav-link" href="user.html"><i class="far fa-square"></i> <span>users</span></a></li>
-            <li><a class="nav-link" href="products.html"><i class="far fa-square"></i> <span>Products
-                    </span></a></li>
-
-            <li><a class="nav-link" href="features-profile.html"><i class="far fa-square"></i>
-                    <span>Offers</span></a></li>
-
-            <li><a class="nav-link" href="auth-login.html"><i class="far fa-square"></i> <span>bills</span></a>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="fas fa-columns"></i>
+                    <span>Offers Section</span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li><a href="{{ route('admin.offers.index') }}">Offers</span></a></li>
+                    <li><a href="{{ route('admin.offers-settings.index') }}">settings</span></a></li>
+                </ul>
             </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="fas fa-columns"></i>
+                    <span>Products Section</span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+                    {{-- <li><a href="{{ route('admin.products.index') }}">Products</span></a></li> --}}
+                    <li><a href="{{ route('admin.products-settings.index') }}">settings</span></a></li>
+                </ul>
+            </li>
+
+            <li><a class="nav-link" href="auth-login.html"><i class="far fa-square"></i> <span>bills</span></a></li>
+            <li><a class="nav-link" href="user.html"><i class="far fa-square"></i> <span>users</span></a></li>
             <li><a class="nav-link" href="auth-register.html"><i class="far fa-square"></i>
                     <span>Register</span></a></li>
             <li><a class="nav-link" href="auth-forgot-password.html"><i class="far fa-square"></i> <span>Forgot

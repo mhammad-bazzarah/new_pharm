@@ -1,6 +1,5 @@
 <?php
-
- function handleUpload($inputName,$model =null){
+function handleUpload($inputName,$model =null){
     try{
         if(request()->hasFile($inputName)){
         if($model && \File::exists(public_path($model->{$inputName}))){

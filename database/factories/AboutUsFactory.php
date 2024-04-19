@@ -17,7 +17,7 @@ class AboutUsFactory extends Factory
     public function definition(): array
     {
         return [
-            'image' => '/img/aboutus.jpg',
+            'image' => '/img/letter-a-icon-png-8847.png',
             'description' =>
             '<p>
                 At Agri pharm Pharmacy, we are dedicated to providing high-quality
