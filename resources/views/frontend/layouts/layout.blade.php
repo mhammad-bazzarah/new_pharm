@@ -16,6 +16,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
     <link href="{{asset('frontend/assets/lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -31,7 +33,6 @@
     <link href="{{asset('frontend/assets/css/styleA.css')}}" rel="stylesheet">
 
     <!-----------------------Style for offers-->
-
     <!-- Owl carousel -->
     <!-- <link rel="stylesheet" href="{{asset('frontend/assets/offers/cssOffers/owl.carousel.min.css')}}"> -->
     <!-- <link rel="stylesheet" href="{{asset('frontend/assets/offers/cssOffers/style.css')}}"> -->

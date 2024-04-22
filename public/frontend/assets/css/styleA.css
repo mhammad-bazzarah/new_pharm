@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro .intro-text {
   padding-top: 140px;
-   
+
   text-align: center;
   vertical-align: top;
 }
@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
   left: calc(50% - 374px);
   bottom: 0;
   height: 360px;
-  
+
 }
 
 @media (max-height: 768px) {
@@ -252,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   #intro .product-screens .product-screen-3 {
     height: 270px;
-    
+
   }
 }
 
@@ -634,7 +634,7 @@ body.mobile-nav-active #mobile-nav-toggle {
    line-height: 0;
    height: 0;
  }
- 
+
  .owl-carousel .owl-stage-outer {
    position: relative;
    overflow: hidden;
@@ -834,14 +834,14 @@ body.mobile-nav-active #mobile-nav-toggle {
    transform: scale(0.8);
    transition: all 0.3s ease-in;
  }
- 
+
  .img-gallery .owl-item.center {
    transform: scale(1);
  }
  .owl-theme .owl-nav.disabled+.owl-dots {
    margin-top: 60px;
  }
- 
+
  .owl-theme .owl-dots .owl-dot span {
    background: #e7d9eb;
    width: 35px;
@@ -849,16 +849,16 @@ body.mobile-nav-active #mobile-nav-toggle {
    border-radius: 10px;
    transition: all 0.3s ease-in;
  }
- 
+
  .owl-theme .owl-dots .owl-dot:hover span {
    background: #ff487e;
  }
- 
+
  .owl-theme .owl-dots .owl-dot.active span {
    background: #ff487e;
    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
  }
- 
+
 
 #features {
   background: #fff;
@@ -924,7 +924,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
 }
-
+/* this effect added by @bazzarah */
+#pricing .get-started-btn:hover{
+    border: 2px solid #1dc8cd;
+    background: linear-gradient(45deg, #1de099, #1dc8cd);
+}
 #pricing .featured {
   border: 2px solid #1dc8cd;
 }
