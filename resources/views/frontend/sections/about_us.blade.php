@@ -1,10 +1,12 @@
+@extends('frontend.layouts.layout')
+@section('content')
 <section id="about" class="section-bg">
     <div class="container-fluid">
         <div class="section-header">
             <h3 class="section-title">{{ $about_settings->title }}</h3>
             <span class="section-divider"></span>
             <p class="section-description">
-                {{ $about_settings->sub_title }}<br>
+                {!! $about_settings->sub_title !!}<br>
             </p>
         </div>
         <div class="row">
@@ -17,3 +19,4 @@
         </div>
     </div>
 </section>
+@endsection

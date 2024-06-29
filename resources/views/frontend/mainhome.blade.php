@@ -10,7 +10,7 @@
   <!-- Favicons -->
   <link href="img/letter-a-icon-png-8847.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
- 
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -21,16 +21,14 @@
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/aos/aos.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-
+  {{-- <link href="lib/aos/aos.css" rel="stylesheet"> --}}
 
   <!-- Main Stylesheet File -->
 
 <link href="css/styleA.css" rel="stylesheet">
 
-  
- 
+
+
 </head>
 
 <body>
@@ -54,11 +52,11 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          
+
           <li><a href="#team">Team</a></li>
-         
+
           <li><a href="#gallery">Gallery</a></li>
-         
+
           <li><a href="#contact">Contact Us</a></li>
           <li><a href="signup.html">Sign Up</a></li>
         </ul>
@@ -107,7 +105,7 @@
           <span class="section-divider"></span>
           <p class="section-description">
             Specialists in our field, wide spread, we guarantee quality.<br>
-            
+
           </p>
         </div>
 
@@ -117,14 +115,14 @@
           </div>
 
           <div class="col-lg-6 content" data-aos="fade-left">
-            
+
             <p>
               At Agri pharm Pharmacy, we are dedicated to providing high-quality
-               natural remedies and products to promote health and well-being. 
-               Our pharmacy specializes in herbal medicines, organic supplements, 
+               natural remedies and products to promote health and well-being.
+               Our pharmacy specializes in herbal medicines, organic supplements,
                and natural skincare products sourced from sustainable and environmentally
                 friendly sources. We believe in the power of nature to heal and nurture, and
-                 our team of experienced pharmacists and herbalists are committed to helping our 
+                 our team of experienced pharmacists and herbalists are committed to helping our
                  customers achieve optimal health through safe
             </p>
 
@@ -134,7 +132,7 @@
               <li><i class="ion-android-checkmark-circle"></i> "You have chosen the best."</li>
             </ul>
 
-          
+
           </div>
         </div>
 
@@ -227,7 +225,7 @@
           <!-- <div class="col-lg-3 col-md-6">
             <div class="member">
               <div class="pic"><img src="img/letter-a-icon-png-8847.png" alt=""></div>
-              
+
             </div>
           </div> -->
 
@@ -428,7 +426,7 @@
             &copy; Copyright <strong>Agri Pharm</strong>. All Rights Reserved
           </div>
           <div class="credits">
-            
+
           </div>
         </div>
         <div class="col-lg-6">
@@ -452,8 +450,7 @@
   <script src="lib/aos/aos.js"></script>
   <script src="lib/superfish/hoverIntent.js"></script>
   <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  
+
   <!-- Contact Form JavaScript File -->
   <script src="js/contactform.js"></script>
 
@@ -461,7 +458,7 @@
   <script src="js/main.js"></script>
 <!-- for pop up-->
 <!-- loader -->
-<div class="loader"></div> 
+<div class="loader"></div>
 <!-- loader -->
 </body>
 </html>

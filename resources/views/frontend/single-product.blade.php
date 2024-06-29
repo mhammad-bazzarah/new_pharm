@@ -1,4 +1,4 @@
-{{ dd(count($related_products)) }}
+{{-- {{ dd(count($related_products)) }} --}}
 @extends('frontend.layouts.shop-layout')
 @section('content')
     <!-- breadcrumb-section -->

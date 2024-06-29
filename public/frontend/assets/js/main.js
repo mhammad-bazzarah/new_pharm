@@ -102,30 +102,7 @@ jQuery(document).ready(function($) {
     }
   });
 
-  // Gallery - uses the magnific popup jQuery plugin
-  $('.gallery-popup').magnificPopup({
-    type: 'image',
-    removalDelay: 300,
-    mainClass: 'mfp-fade',
-    gallery: {
-      enabled: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300,
-      easing: 'ease-in-out',
-      opener: function(openerElement) {
-        return openerElement.is('img') ? openerElement : openerElement.find('img');
-      }
-    }
-  });
 
-  // custom code
-  // عند تحميل الصفحة
-window.addEventListener("load", function () {
-  const loader = document.querySelector(".loader");
-  loader.style.display = "none"; // اخفاء loader بمجرد تحميل الصفحة
-});
 
 
 });

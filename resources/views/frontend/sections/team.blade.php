@@ -1,3 +1,5 @@
+@extends('frontend.layouts.layout')
+@section('content')
 <section id="team" class="section-bg">
     <div class="container">
         <div class="section-header">
@@ -24,3 +26,4 @@
         </div>
     </div>
 </section>
+@endsection

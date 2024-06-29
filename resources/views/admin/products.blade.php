@@ -35,8 +35,6 @@
 	<link rel="stylesheet" href="assets/products/bootstrap/css/bootstrap.min.css">
 	<!-- owl carousel -->
 	<link rel="stylesheet" href="assets/products/owl.carousel.css">
-	<!-- magnific popup -->
-	<link rel="stylesheet" href="assets/products/magnific-popup.css">
 	<!-- animate css -->
 	<link rel="stylesheet" href="assets/products/animate.css">
 	<!-- mean menu css -->
@@ -47,7 +45,7 @@
 	<link rel="stylesheet" href="assets/products/responsive.css">
   <!-- end style for products-->
   <style>
-    
+
   </style>
 </head>
 
@@ -57,7 +55,7 @@
     <nav class="navbar navbar-expand-lg main-navbar">
       <div class="form-inline mr-auto"></div>
       <ul class="navbar-nav navbar-right">
-        
+
       </ul>
     </nav>
     <div class="main-sidebar sidebar-style-2">
@@ -105,7 +103,7 @@
             </div>
             <h1>products</h1>
             <div class="section-header-breadcrumb">
-              
+
             </div>
           </div>
 
@@ -131,7 +129,7 @@
                   </div>
                   <h3 id="product-name">seed1</h3>
                   <p class="product-price"><span>Per Kg</span> 85$ </p>
-                  <a href="#" class="cart-btn" onclick="showUpdateFields()">Update</a> 
+                  <a href="#" class="cart-btn" onclick="showUpdateFields()">Update</a>
                   <a href="#" class="cart-btn" onclick="handleDeleteClick()">Delete</a>
                 </div>
               </div>
@@ -157,7 +155,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <!-- /div hidden for updates-->
               <div class="col-lg-4 col-md-6 text-center berry">
                 <div class="single-product-item">
@@ -226,7 +224,7 @@
                   </div>
                   <h3>tool2</h3>
                   <p class="product-price"><span>Per Kg</span> 70$ </p>
-                  <a href="#" class="cart-btn update" onclick="handleUpdateButtonClick(event, 1)">Update</a> 
+                  <a href="#" class="cart-btn update" onclick="handleUpdateButtonClick(event, 1)">Update</a>
                   <a href="#" class="cart-btn delete" onclick="handleDeleteButtonClick(event, 1)">Delete</a>
                 </div>
               </div>
@@ -240,13 +238,13 @@
                   <a href="#" class="cart-btn"> Update</a> <a href="#" class="cart-btn"> delete </a>
                 </div>
               </div>
-              
+
             </div>
-            
+
             </div>
-            
-              
-              
+
+
+
             <div class="row">
               <div class="col-lg-12 text-center">
                 <div class="pagination-wrap">
@@ -294,7 +292,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <!--Script for hidden products-->
-  <script> 
+  <script>
   // Get the necessary elements
   const addNewProductBtn = document.getElementById('add-new-product-btn');
   const addProductForm = document.getElementById('add-product-form');

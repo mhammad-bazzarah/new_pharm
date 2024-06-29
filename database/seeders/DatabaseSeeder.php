@@ -4,6 +4,11 @@ namespace Database\Seeders;
 
 use App\Models\AboutUs;
 use App\Models\AboutUsSetting;
+use App\Models\FooterContactInfo;
+use App\Models\FooterInfo;
+use App\Models\FooterSocialLink;
+use App\Models\GalleryItem;
+use App\Models\GallerySetting;
 use App\Models\Offer;
 use App\Models\OfferSetting;
 use App\Models\Product;
@@ -27,6 +32,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'is_admin' => 1
         ]);
         // About-us Section Factories
         AboutUsSetting::factory()->create();
@@ -79,6 +85,27 @@ class DatabaseSeeder extends Seeder
             ['image' => 'img/team/abbas.jpg' , 'name'=> 'Mhammad Abbas' ,'job_title' => 'Frontend Developer' ,],
             ['image' => 'img/team/lojain.jpg' , 'name'=> 'Logain Ismail' ,'job_title' => 'Frontend Developer' ,],
         )->create();
+
+        GallerySetting::factory()->create();
+        GalleryItem::factory()->count(6)->sequence(
+            ['image' => 'img/gallery/gallery.jpg'],
+            ['image' => 'img/gallery/gallery1.jpg'],
+            ['image' => 'img/gallery/gallery2.jpg'],
+            ['image' => 'img/gallery/gallery3.jpg'],
+            ['image' => 'img/gallery/gallery4.jpg'],
+            ['image' => 'img/gallery/gallery5.jpg'],
+        )->create();
+
+        FooterSocialLink::factory()->count(4)->sequence(
+            ['icon'=> 'fa fa-twitter'],
+            ['icon'=> 'fa fa-facebook'],
+            ['icon'=> 'fa fa-instagram'],
+            ['icon'=> 'fa fa-linkedin'],
+        )
+        ->create();
+
+        FooterInfo::factory()->create();
+        FooterContactInfo::factory()->create();
     }
 
 

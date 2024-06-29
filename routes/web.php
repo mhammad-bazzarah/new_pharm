@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\aboutUsController;
 use App\Http\Controllers\Admin\aboutUsSettingController;
+use App\Http\Controllers\Admin\dashboardController;
+use App\Http\Controllers\Admin\gallerySettingController;
 use App\Http\Controllers\Admin\offerController;
 use App\Http\Controllers\Admin\offerSettingController;
 use App\Http\Controllers\Admin\productController;
@@ -9,16 +11,17 @@ use App\Http\Controllers\Admin\productSettingController;
 use App\Http\Controllers\Admin\teamSettingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Auth\Events\Verified;
+use App\Http\Controllers\weatherController;
+use App\Http\Middleware\isAdmin;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -26,18 +29,26 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/home',[HomeController::class,'index'])->name('home');
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/about',[HomeController::class,'aboutUs'])->name('aboutUs');
+Route::get('/team',[HomeController::class,'team'])->name('team');
+Route::get('/Offers',[HomeController::class,'offers'])->name('Offers');
+Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 Route::get('/shop',[HomeController::class,'shop'])->name('shop');
 Route::get('/single-product/{id}',[HomeController::class,'singleProduct'])->name('single-product');
+
+Route::get('/weatherPage',function(){
+    return view('frontend.weather');
+});
+Route::get('/weather', [weatherController::class, 'getWeatherData'])->name('weather');
+
 
 /** admin routes */
 
 // admin pannel , don't forget to give it a middleware later... and remove the dashboard route above to replace
-Route::group(['prifex' => 'admin', 'as' => 'admin.' ,'middleware'=>['auth']  ], function () {
+Route::group(['prifex' => 'admin', 'as' => 'admin.' ,'middleware'=>['auth','verified',isAdmin::class]  ], function () {
     // About-us section routes.
-    Route::get('/admine', function () {
-        return view('admin.index');
-    })->name('panel');
+    Route::get('/dashboard', [dashboardController::class,'index'])->name('dashboard');
     Route::resource('/aboutUs', aboutUsController::class);
     Route::resource('/aboutUs-settings', aboutUsSettingController::class);
 
@@ -48,6 +59,8 @@ Route::group(['prifex' => 'admin', 'as' => 'admin.' ,'middleware'=>['auth']  ], 
     Route::resource('/products',productController::class);
 
     Route::resource('/team-settings',teamSettingController::class);
+
+    Route::resource('/gallery-settings',gallerySettingController::class);
 
 });
 

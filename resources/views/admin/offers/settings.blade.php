@@ -3,7 +3,7 @@
     <section class="section">
         <div class="section-header">
             <div class="section-header-back">
-                <a href="/admn" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="/admine" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             <h1> Offers Settings Section</h1>
         </div>

@@ -28,7 +28,7 @@ class aboutUsController extends Controller
         $about->description = $request->description;
         $about->image = $imagePath;
         $about->save();
-        toastr()->success('About Us Details Updated Successfully','Success');
+        // toastr()->('About Us Details Updated Successfully','Success');
         return redirect()->back();
     }
 

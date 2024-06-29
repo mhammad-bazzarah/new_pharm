@@ -70,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  background: linear-gradient(45deg, #1de099, #1dc8cd);
 }
 
 #header #logo {
@@ -545,6 +546,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #about {
   padding: 60px 0;
+  margin-top: 35px;
 }
 
 #about .about-img {
@@ -863,6 +865,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #features {
   background: #fff;
   padding: 60px 0 0 0;
+  margin-top: 35px;
 }
 
 
@@ -1007,6 +1010,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #team {
   padding: 60px 0;
+  margin-top: 35px;
 }
 
 #team .member {
@@ -1106,9 +1110,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact {
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   padding: 60px 0;
+  margin-top: 40px;
 }
 
-#contact .contact-about h3 {
+#footer .footer-about h3 {
   font-size: 36px;
   margin: 0 0 10px 0;
   padding: 0;
@@ -1120,18 +1125,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #1dc8cd;
 }
 
-#contact .contact-about p {
+#footer .footer-about p {
   font-size: 14px;
   line-height: 24px;
   font-family: "Montserrat", sans-serif;
   color: #888;
 }
 
-#contact .social-links {
+#footer .social-links {
   padding-bottom: 20px;
 }
 
-#contact .social-links a {
+#footer .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #fff;
@@ -1147,25 +1152,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 1px solid #1dc8cd;
 }
 
-#contact .social-links a:hover {
+#footer .social-links a:hover {
   background: #1dc8cd;
   color: #fff;
 }
 
-#contact .info {
+#footer .info {
   color: #333333;
 }
 
-#contact .info i {
+#footer .info i {
   font-size: 32px;
   color: #1dc8cd;
   float: left;
   line-height: 1;
 }
 
-#contact .info p {
+#footer .info p {
   padding: 0 0 10px 42px;
-  line-height: 28px;
+  line-height: 33px;
   font-size: 14px;
 }
 

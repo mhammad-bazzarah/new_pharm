@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('Agri_pharm', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -122,5 +122,17 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+
+
+    // cities latitude and longitude for weather api
+    'cities' =>[
+        'lattakia' =>['lat' =>'35.4011', 'lng' => '35.9487'],
+        'tartous' =>['lat' =>'34.889', 'lng' => '35.8866'],
+        'Homs' =>['lat' =>'34.7268', 'lng' => '36.7234'],
+        'damascus' =>['lat' =>'33.5102', 'lng' => '36.2913'],
+        'aleppo' =>['lat' =>'36.2012', 'lng' => '37.1612'],
+        'daraa' =>['lat' =>'32.6189', 'lng' => '36.1021'],
+        'alhasaka' =>['lat' =>'36.5024', 'lng' => '40.7477'],
+        ]
 
 ];

@@ -25,8 +25,7 @@
     <!-- Libraries CSS Files -->
     <link href="{{asset('frontend/assets/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/assets/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/assets/lib/aos/aos.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/assets/lib/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
+    {{-- <link href="{{asset('frontend/assets/lib/aos/aos.css')}}" rel="stylesheet"> --}}
 
 
     <!-- Main Stylesheet File -->
@@ -38,7 +37,7 @@
     <!-- <link rel="stylesheet" href="{{asset('frontend/assets/offers/cssOffers/style.css')}}"> -->
     <!-- <link href="{{asset('frontend/assets/css/offers.css')}}"> -->
     <!-- /style for Offers -->
-
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 </head>
 
 <body>
@@ -55,10 +54,9 @@
     <script src="{{asset('frontend/assets/lib/jquery/jquery-migrate.min.js')}}"></script>
     <script src="{{asset('frontend/assets/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('frontend/assets/lib/easing/easing.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/lib/aos/aos.js')}}"></script>
+    {{-- <script src="{{asset('frontend/assets/lib/aos/aos.js')}}"></script> --}}
     <script src="{{asset('frontend/assets/lib/superfish/hoverIntent.js')}}"></script>
     <script src="{{asset('frontend/assets/lib/superfish/superfish.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/lib/magnific-popup/magnific-popup.min.js')}}"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
         data-cf-beacon="{"
         rayId":"7a3955141ada01db","token":"dab7be3e6ab04952b40d6c8e93f6cc2a","version":"2023.2.0","si":100}"
@@ -86,6 +84,7 @@
     <script src="{{asset('frontend/assets/js/main.js')}}"></script>
     <!-- for pop up-->
 
+        @yield('scripts')
 </body>
 
 </html>

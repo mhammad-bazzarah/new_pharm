@@ -31,11 +31,11 @@
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="index.html#intro">Home</a></li>
-                    <li><a href="/home#about">About Us</a></li>
-                    <li><a href="index.html#features">Offers</a></li>
-                    <li><a href="index.html#team">Team</a></li>
-                    <li><a href="index.html#contact">Contact Us</a></li>
+                    <li class="menu-active"><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{route('aboutUs')}}">About Us</a></li>
+                    <li><a href="{{route('Offers')}}">Offers</a></li>
+                    <li><a href="{{route('team')}}">Team</a></li>
+                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                 </ul>
             </nav>
         </div>

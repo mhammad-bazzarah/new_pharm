@@ -78,7 +78,16 @@
                     <li><a href="{{ route('admin.team-settings.index') }}">settings</span></a></li>
                 </ul>
             </li>
-
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="fas fa-columns"></i>
+                    <span>Galley Section</span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+                    {{-- <li><a href="{{ route('admin.teamMembers.index') }}">Members</span></a></li> --}}
+                    <li><a href="{{ route('admin.gallery-settings.index') }}">settings</span></a></li>
+                </ul>
+            </li>
             {{-- <li><a class="nav-link" href="user.html"><i class="far fa-square"></i> <span>users</span></a></li> --}}
         </ul>
     </aside>

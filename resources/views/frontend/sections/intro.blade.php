@@ -2,8 +2,8 @@
     <div class="intro-text">
         <h2>Welcome to Agri Pharm</h2>
         <p>We have everything you need for farming. </p>
-        <a href="#about" class="btn-get-started scrollto">Start</a>
-    </div>
+        {{-- <a href="{{route('login')}}" class="btn-get-started scrollto">Start</a> --}}
+       </div>
     <div class="product-screens">
         <div class="product-screen-1" data-aos="fade-up" data-aos-delay="400">
             <img src="{{ asset('img/tree4.jpg') }}" alt="">
