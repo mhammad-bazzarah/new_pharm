@@ -9,17 +9,21 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Description</th>
-                <th scope="col">Publish Date</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Category</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($offers as $offer )
+            @foreach ($products as $product )
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-                <td>{{ $offer->description }}</td>
-                <td>{{ $offer->created_at }}</td>
+                <td>{{ $product->name }}</td>
+                <td>{{ $product->price }}</td>
+                <td>{{ $product->quantity }}</td>
+                <td>{{ $product->Category->name }}</td>
                 <td><a><i class="bi bi-pencil-square"></i></a>edit</td>
             </tr>
             @endforeach

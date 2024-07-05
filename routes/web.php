@@ -47,6 +47,7 @@ Route::get('/weather', [weatherController::class, 'getWeatherData'])->name('weat
 
 // admin pannel , don't forget to give it a middleware later... and remove the dashboard route above to replace
 Route::group(['prifex' => 'admin', 'as' => 'admin.' ,'middleware'=>['auth','verified',isAdmin::class]  ], function () {
+// Route::group(['prifex' => 'admin', 'as' => 'admin.' ,'middleware'=>['auth','verified']  ], function () {
     // About-us section routes.
     Route::get('/dashboard', [dashboardController::class,'index'])->name('dashboard');
     Route::resource('/aboutUs', aboutUsController::class);
@@ -61,7 +62,7 @@ Route::group(['prifex' => 'admin', 'as' => 'admin.' ,'middleware'=>['auth','veri
     Route::resource('/team-settings',teamSettingController::class);
 
     Route::resource('/gallery-settings',gallerySettingController::class);
-
+    Route::view('/test','admin.products');
 });
 
 

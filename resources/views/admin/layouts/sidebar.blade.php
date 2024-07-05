@@ -64,7 +64,7 @@
                     <span>Products Section</span>
                 </a>
                 <ul class="dropdown-menu" style="display: none;">
-                    {{-- <li><a href="{{ route('admin.products.index') }}">Products</span></a></li> --}}
+                    <li><a href="{{ route('admin.products.index') }}">Products</span></a></li>
                     <li><a href="{{ route('admin.products-settings.index') }}">settings</span></a></li>
                 </ul>
             </li>

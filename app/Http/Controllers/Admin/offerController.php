@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Offer;
 use Illuminate\Http\Request;
 
 class offerController extends Controller
@@ -12,7 +13,8 @@ class offerController extends Controller
      */
     public function index()
     {
-        
+        $offers = Offer::all();
+        return view('admin.offers.index',compact('offers'));
     }
 
     /**
