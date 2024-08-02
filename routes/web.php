@@ -36,10 +36,6 @@ Route::get('/Offers',[HomeController::class,'offers'])->name('Offers');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 Route::get('/shop',[HomeController::class,'shop'])->name('shop');
 Route::get('/single-product/{id}',[HomeController::class,'singleProduct'])->name('single-product');
-
-Route::get('/weatherPage',function(){
-    return view('frontend.weather');
-});
 Route::get('/weather', [weatherController::class, 'getWeatherData'])->name('weather');
 
 

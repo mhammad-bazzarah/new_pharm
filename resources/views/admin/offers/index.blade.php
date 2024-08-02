@@ -2,8 +2,11 @@
 @section('content')
 <section class="section">
     <div class="section-header d-flex justify-content-between  ">
-        <h1>Products</h1>
-        <div ><a class="btn bg-warning text-white p-2 text-lg " > Add New Product</a> </div>
+        <div class="section-header-back">
+            <a href="{{route('admin.dashboard')}}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <h1>Offers</h1>
+        <div ><a class="btn bg-warning text-white p-2 text-lg " href="{{ route('admin.offers.create') }}" > Add New Product</a> </div>
     </div>
     <table class="table  bg-38CCC2 table-striped mt-2" style="background-color: #57dfd6" >
         <thead>

@@ -22,7 +22,7 @@ class offerController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.offers.create');
     }
 
     /**
@@ -30,7 +30,18 @@ class offerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $offer = new Offer();
+        $request->validate([
+            'description'=> 'required' ,
+            'image' => ['required' ,'image'] ,
+        ]);
+
+        $imagePath = handleUpload('image',$offer);
+        $offer->description = $request->description;
+        $offer->image = $imagePath;
+        $offer->save();
+        toastr()->success('New Offer Added Succefully','Success');
+        return redirect()->route('admin.offers.index');
     }
 
     /**

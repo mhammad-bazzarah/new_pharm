@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use Illuminate\Http\Request;
 
 class productController extends Controller
@@ -22,7 +23,8 @@ class productController extends Controller
      */
     public function create()
     {
-        //
+        $categories = ProductCategory::all();
+        return view('admin.products.create',compact('categories'));
     }
 
     /**
@@ -30,7 +32,26 @@ class productController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'max:200'],
+            'category_id' => ['required', 'numeric'],
+            'description' => ['required', 'max:1000'],
+            'image' => ['required', 'max:1000', 'image'],
+            'quantity' =>['required','numeric'] ,
+            'price' =>['required','numeric']
+        ]);
+        $product = new Product();
+        $imagePath = handleUpload('image', $product);
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->image = $imagePath;
+        $product->quantity = $request->quantity;
+        $product->price = $request->price;
+
+        $product->save();
+        toastr()->success('New Product Added Successfully.');
+        return redirect(route('admin.products.index'));
     }
 
     /**
