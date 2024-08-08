@@ -29,7 +29,7 @@
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->quantity }}</td>
                         <td>{{ $product->Category->name }}</td>
-                        <td><a><i class="bi bi-pencil-square"></i></a>edit</td>
+                        <td><a href="{{ route('admin.products.edit', $product->id) }}"><i class="fa fa-edit "></i> </a> </td>
                     </tr>
                 @endforeach
 

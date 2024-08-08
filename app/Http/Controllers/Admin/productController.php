@@ -67,7 +67,9 @@ class productController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $categories = ProductCategory::all();
+        return view('admin.products.edit',compact('product','categories'));
     }
 
     /**
@@ -75,7 +77,26 @@ class productController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => [ 'max:200'],
+            'category_id' => [ 'numeric'],
+            'description' => [ 'max:1000'],
+            'image' => [ 'max:1000', 'image'],
+            'quantity' =>['numeric'] ,
+            'price' =>['numeric']
+        ]);
+        $product = Product::findOrFail($id);
+        $imagePath = handleUpload('image', $product);
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->image = (!empty($imagePath)) ? $imagePath : $product->image;
+        $product->quantity = $request->quantity;
+        $product->price = $request->price;
+
+        $product->save();
+        toastr()->success(' Product Updated Successfully.');
+        return redirect(route('admin.products.index'));
     }
 
     /**

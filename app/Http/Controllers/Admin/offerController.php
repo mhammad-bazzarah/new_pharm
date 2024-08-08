@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Offer;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\isEmpty;
+
 class offerController extends Controller
 {
     /**
@@ -57,7 +59,8 @@ class offerController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $offer = Offer::findOrFail($id);
+        return view('admin.offers.edit',compact('offer'));
     }
 
     /**
@@ -65,7 +68,19 @@ class offerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        $offer =  Offer::findOrFail($id);
+        $request->validate([
+            'description'=> 'required' ,
+            'image' => ['required' ,'image'] ,
+        ]);
+
+        $imagePath = handleUpload('image',$offer);
+        $offer->description = $request->description;
+        $offer->image = (!Empty($imagePath)) ? $imagePath : $offer->image;
+        $offer->save();
+        toastr()->success(' Offer updated Succefully','Success');
+        return redirect()->route('admin.offers.index');
     }
 
     /**
