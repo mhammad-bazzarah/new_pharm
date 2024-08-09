@@ -72,7 +72,7 @@
     </div>
 </header> --}}
 
-
+    {{-- {{ dd($weatherData) }} --}}
     <div class="container mt-5">
         <h1 class="text-center mb-4">Weather Forecast</h1>
         <div class="row">
@@ -85,7 +85,7 @@
                                 $dateString = $weatherData['current']['time'];
                                 $carbonDate = Carbon::parse($dateString);
                                 // Format the date as you like
-                                $formattedDate = $carbonDate->format('F j, Y \a\t g:i A'); // Example: July 29, 2024 6:15 PM
+                                $formattedDate = $carbonDate->format('F j, \a\t g:i A'); // Example: July 29, 2024 6:15 PM
                                 // Output the formatted date
                             @endphp
                             {{-- <p id="current-time">{{ $weatherData['current']['time'] }}</p> --}}

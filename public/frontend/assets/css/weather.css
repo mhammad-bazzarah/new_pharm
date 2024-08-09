@@ -4,7 +4,8 @@ body {
   animation: gradient 15s ease infinite;
   font-family: 'Montserrat', sans-serif;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
+  margin-bottom: 10px;
 }
 
 @keyframes gradient {

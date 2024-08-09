@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 longitude = '35.9276';
             } else if (location == 'banias') {
                 latitude = '34.1893';
-                longitude = '35..9537';
+                longitude = '35.9537';
             } else if (location == 'homs') {
                 latitude = '34.7268';
                 longitude = '35.7234';

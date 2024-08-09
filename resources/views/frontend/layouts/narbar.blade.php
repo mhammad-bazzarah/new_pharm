@@ -2,8 +2,6 @@
     <div class="container">
         <div id="logo" class="pull-left">
             <h1><a href="{{ route('home') }}" class="scrollto">Agri Pharm</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            {{-- <a href="#intro"><img src="{{asset('img/logo.png')}}" alt="" title="" /></img></a> --}}
         </div>
         <nav id="nav-menu-container">
             <ul class="nav-menu">
@@ -16,18 +14,30 @@
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
                 @auth
                     <li><a href="{{ route('weather') }}">weather</a></li>
-                    {{-- welcome {{ Auth::user()->name }} --}}
-                    {{-- <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <li><button class="" type="submit"> Logout</button></li>
-                    </form> --}}
-                    {{-- <li><a href="{{ route('logout') }}">Logout</a></li> --}}
+
+                    @if (Auth()->user()->is_admin)
+                        <li><a href="{{ route('admin.dashboard') }}">dashboard</a></li>
+                    @else
+                        <li class="dropdown">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <a href="" class=" text-danger"
+                                    onclick="event.preventDefault(); this.closest('form').submit();">
+                                    <i class="fa fa-sign-out"></i> Logout
+                                </a>
+                            </form>
+                        </li>
+                    @endif
                 @endauth
                 @guest
                     <li><a href="{{ route('register') }}">signUp</a></li>
+
                 @endguest
 
             </ul>
+            <div class="form-inline mr-auto"></div>
+
         </nav>
+
     </div>
 </header>

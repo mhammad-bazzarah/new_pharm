@@ -10,9 +10,6 @@
                 <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
                 </a>
-                <a href="#" class="dropdown-item has-icon">
-                    <i class="fas fa-cog"></i> Settings
-                </a>
                 <div class="dropdown-divider"></div>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

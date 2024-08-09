@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\isAdmin;
 use App\Models\AboutUs;
 use App\Models\AboutUsSetting;
 use App\Models\GalleryItem;
@@ -15,6 +16,9 @@ use App\Models\ProductSetting;
 use App\Models\TeamMember;
 use App\Models\TeamSetting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+use function PHPUnit\Framework\isNull;
 
 class HomeController extends Controller
 {
@@ -26,7 +30,8 @@ class HomeController extends Controller
         return view('frontend.index', compact(
             'productSettings',
             'gallerySettings',
-            'galleryItems'
+            'galleryItems',
+            'middleware',
 
         ));
     }
