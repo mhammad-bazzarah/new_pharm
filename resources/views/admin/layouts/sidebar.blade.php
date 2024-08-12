@@ -4,7 +4,7 @@
     <ul class="navbar-nav navbar-right">
         <li class="dropdown"><a href="#" data-toggle="dropdown"
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                <div class="d-sm-none d-lg-inline-block">Hi,name</div>
+                <div class="d-sm-none d-lg-inline-block">Hi,{{ Auth()->user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon">
@@ -31,7 +31,8 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="nav-item active">
-                <a href="{{ route('admin.dashboard') }}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="{{ route('admin.dashboard') }}" class="nav-link"><i
+                        class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Sections</li>
 
@@ -85,7 +86,31 @@
                     <li><a href="{{ route('admin.gallery-settings.index') }}">settings</span></a></li>
                 </ul>
             </li>
-            {{-- <li><a class="nav-link" href="user.html"><i class="far fa-square"></i> <span>users</span></a></li> --}}
+            <li class="menu-header">Payment</li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="fas fa-columns"></i>
+                    <span>Incoming Invoices </span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li><a href="{{ route('admin.paid') }}"><i class="fas fa-check-circle"></i>Paid</span></a></li>
+                    <li><a href="{{ route('admin.pending') }}"><i class="fas fa-hourglass-start"></i>
+                            Pending</span></a></li>
+            </li>
+        </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                <i class="fas fa-columns"></i>
+                <span>Outgoing Invoices</span>
+            </a>
+            <ul class="dropdown-menu" style="display: none;">
+                <li><a href="{{ route('admin.paid') }}"><i class="fas fa-check-circle"></i>Paid</span></a></li>
+                <li><a href="{{ route('admin.pending') }}"><i class="fas fa-hourglass-start"></i> Pending</span></a>
+                </li>
+
+            </ul>
+        </li>
         </ul>
     </aside>
 </div>

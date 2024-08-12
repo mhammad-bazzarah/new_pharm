@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\aboutUsController;
 use App\Http\Controllers\Admin\aboutUsSettingController;
 use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Admin\gallerySettingController;
+use App\Http\Controllers\Admin\InvoiceController;
+use App\Http\Controllers\Admin\InvoiceItemController;
 use App\Http\Controllers\Admin\offerController;
 use App\Http\Controllers\Admin\offerSettingController;
 use App\Http\Controllers\Admin\productController;
@@ -56,10 +58,16 @@ Route::group(['prifex' => 'admin', 'as' => 'admin.' ,'middleware'=>['auth','veri
     Route::resource('/team-settings',teamSettingController::class);
 
     Route::resource('/gallery-settings',gallerySettingController::class);
+
+    Route::get('/paid_invoices',[InvoiceController::class,'paid'])->name('paid');
+    Route::get('/pending_invoices',[InvoiceController::class,'pending'])->name('pending');
+    Route::get('/paid_outgoing_invoices',[InvoiceController::class,'paidOutgoing'])->name('paidOutgoing');
+    Route::get('/pending_outgoing_invoices',[InvoiceController::class,'pendingOutgoing'])->name('pendingOutgoing');
+    Route::resource('/invoice',InvoiceController::class);
+
+    Route::get('/new_item/{id}',[InvoiceItemController::class,'newItem'])->name('new_item');
+    Route::resource('/invoice_item',InvoiceItemController::class);
 });
-
-
-
 
 
 

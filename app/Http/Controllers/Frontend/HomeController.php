@@ -31,7 +31,6 @@ class HomeController extends Controller
             'productSettings',
             'gallerySettings',
             'galleryItems',
-            'middleware',
 
         ));
     }

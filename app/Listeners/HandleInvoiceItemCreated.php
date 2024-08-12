@@ -3,6 +3,8 @@
 namespace App\Listeners;
 
 use App\Events\InvoiceItemCreated;
+use App\Models\Invoice;
+use App\Models\Product;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
@@ -22,7 +24,7 @@ class HandleInvoiceItemCreated
     public function handle(InvoiceItemCreated $event): void
     {
         $invoiceItem = $event->invoiceItem;
-           $product = $invoiceItem->product;
+           $product = Product::findOrFail($invoiceItem->product_id) ;
 
            // 1. Check for available quantity
            if ($invoiceItem->quantity > $product->quantity) {
@@ -42,7 +44,7 @@ class HandleInvoiceItemCreated
            $invoiceItem->save();
 
            // 5. Update invoice total_amount
-           $invoice = $invoiceItem->invoice;
+           $invoice = Invoice::findOrFail($invoiceItem->invoice_id) ;
            $invoice->total_amount += $invoiceItem->line_total;
            $invoice->save();
     }
