@@ -109,7 +109,7 @@ class InvoiceController extends Controller
         $pageName = " Incoming Pending ";
         return view('admin.invoices.index', compact('invoices','pageName'));
     }
-    public function paidOutging()
+    public function paidOutgoing()
     {
         $invoices =  Invoice::where('invoice_type', 'outgoing')->where('payment_status', 'pending')->get();
         $pageName = " Outgoing Paid ";

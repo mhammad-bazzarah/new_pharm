@@ -105,8 +105,8 @@
                 <span>Outgoing Invoices</span>
             </a>
             <ul class="dropdown-menu" style="display: none;">
-                <li><a href="{{ route('admin.paid') }}"><i class="fas fa-check-circle"></i>Paid</span></a></li>
-                <li><a href="{{ route('admin.pending') }}"><i class="fas fa-hourglass-start"></i> Pending</span></a>
+                <li><a href="{{ route('admin.paidOutgoing') }}"><i class="fas fa-check-circle"></i>Paid</span></a></li>
+                <li><a href="{{ route('admin.pendingOutgoing') }}"><i class="fas fa-hourglass-start"></i> Pending</span></a>
                 </li>
 
             </ul>
